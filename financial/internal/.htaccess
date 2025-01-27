@@ -1,0 +1,14 @@
+# Página de inicio por defecto
+DirectoryIndex index.html
+
+# Deshabilitar listado de directorios
+Options -Indexes
+
+# Limitar acceso a la subred especificada
+Order deny,allow
+Allow from 192.168.0.0/28
+
+# Seguridad adicional
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set X-XSS-Protection "1; mode=block"

@@ -1,0 +1,8 @@
+# Página de inicio por defecto
+DirectoryIndex index.html
+
+# Deshabilitar listado de directorios
+Options -Indexes
+
+# Seguridad básica
+Header always set X-Content-Type-Options "nosniff"

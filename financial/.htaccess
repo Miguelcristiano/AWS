@@ -1,0 +1,16 @@
+# Página de inicio por defecto
+DirectoryIndex index.html
+
+# Deshabilitar listado de directorios
+Options -Indexes
+
+# Seguridad básica
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set X-XSS-Protection "1; mode=block"
+
+# Permitir solo métodos seguros
+<LimitExcept GET POST>
+    Deny from all
+</LimitExcept>
+

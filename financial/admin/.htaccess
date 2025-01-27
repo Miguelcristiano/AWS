@@ -1,0 +1,16 @@
+# Página de inicio por defecto
+DirectoryIndex index.html
+
+# Deshabilitar listado de directorios
+Options -Indexes
+
+# Autenticación básica para limitar acceso
+AuthType Basic
+AuthName "Restricted Access"
+AuthUserFile /var/www/financial/admin/.htpasswd
+Require user admin1 admin2
+
+# Seguridad adicional
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set X-XSS-Protection "1; mode=block"

@@ -1,0 +1,6 @@
+Options -Indexes -Multiviews -FollowSymLinks
+DirectoryIndex index.html
+type Basic
+AuthName "Zona Financial"
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user
